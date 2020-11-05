@@ -1,0 +1,11 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ô…Û¯
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.( Ì∫∞
+N	java:S106	"9Replace this use of System.out or System.err by a logger.( Ì∫∞
+J
+java:S1128"4Remove this unused import 'org.w3c.dom.ls.LSOutput'.(“Ωæä
+V	java:S125"<This block of commented-out lines of code should be removed.(Õôëº˚ˇˇˇˇ
+N	java:S106"9Replace this use of System.out or System.err by a logger.( Ì∫∞
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õ—‹É˙ˇˇˇˇ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(‹—–œ¯ˇˇˇˇ
