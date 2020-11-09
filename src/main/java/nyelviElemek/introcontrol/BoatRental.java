@@ -7,24 +7,27 @@ public class BoatRental {
         int boat2 = 2;
         int placesLeft = 10-numberOfPersons;
         int onShore = numberOfPersons-10;
+        String nop = "Number of persons: ";
+        String pl = " places left";
+
         if (numberOfPersons<=boat2){
-            return "Number of persons: " + numberOfPersons+ ", taken: boat2(for max 2ppl) "+placesLeft+" places left";
+            return nop + numberOfPersons+ ", taken: boat2(for max 2ppl) "+placesLeft+ pl;
         }
         if (numberOfPersons==boat3){
-            return "Number of persons: " + numberOfPersons+ ", taken: boat3(for max 3ppl)"+placesLeft+" places left";
+            return nop + numberOfPersons+ ", taken: boat3(for max 3ppl)"+placesLeft+ pl;
         }
         if(numberOfPersons<=boat5){
-            return "Number of persons: " + numberOfPersons+ ", taken: boat5(for max 5ppl)"+placesLeft+" places left";
+            return nop + numberOfPersons+ ", taken: boat5(for max 5ppl)"+placesLeft+ pl;
         }
         if (numberOfPersons<=boat5+boat2){
-            return "Number of persons: " + numberOfPersons+ ", taken: boat5+2(for max 7ppl)"+placesLeft+" places left";
+            return nop + numberOfPersons+ ", taken: boat5+2(for max 7ppl)"+placesLeft+ pl;
         }
         if (numberOfPersons<=boat3+boat5){
-            return "Number of persons: " + numberOfPersons+ ",taken: boat5+3(for max 8ppl)"+placesLeft+" places left";
+            return nop + numberOfPersons+ ",taken: boat5+3(for max 8ppl)"+placesLeft+ pl;
         }
         if (numberOfPersons<=boat3+boat5+boat2){
-            return "Number of persons: " + numberOfPersons+ ", taken: boat5+3+2(for max 10ppl)"+placesLeft+" places left";
+            return nop + numberOfPersons+ ", taken: boat5+3+2(for max 10ppl)"+placesLeft+ pl;
         }
-        return "Number of persons: " + numberOfPersons+ ", taken: boat5+3+2(for max 10ppl), "+onShore +" ppl on shore";
+        return nop + numberOfPersons+ ", taken: boat5+3+2(for max 10ppl), "+onShore + pl;
     }
 }
