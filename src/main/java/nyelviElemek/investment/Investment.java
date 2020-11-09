@@ -38,6 +38,13 @@ public class Investment {
     }
 
     public double close(int days){
-        return active ? (fund+getYield(days))-((fund+getYield(days))*0.003) : 0;
+        //return active ? (fund+getYield(days))-((fund+getYield(days))*0.003),setActive(false) : 0;
+        if (active==true){
+            setActive(false);
+            return (fund+getYield(days))-((fund+getYield(days))*0.003);
+        }
+        else {
+            return 0;
+        }
     }
 }

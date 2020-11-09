@@ -8,14 +8,17 @@ public class InvestmentMain {
     public static void main(String[] args) {
         Investment inv1=new Investment(0,0);
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give amount of fund and interest rate, please.");
+        System.out.println("Kérem a befektetett összeget.");
         inv1.setFund(scanner.nextInt());
-        inv1.setInterestRate(scanner.nextInt());
-        System.out.println(inv1.getFund());
-        System.out.println(inv1.getInterestRate());
+        System.out.println("Kérem a kamatlábat.");
 
-        System.out.println(inv1.getYield(80));
-        System.out.println(inv1.close(80));
+        inv1.setInterestRate(scanner.nextInt());
+        System.out.println("Befektetett összeg: " + inv1.getFund());
+        System.out.println("Kamatláb: " + inv1.getInterestRate());
+
+        System.out.println("Hozam 50 napra: " + inv1.getYield(50));
+        System.out.println("Kivett összeg 80 nap után: "+ inv1.close(80));
+        System.out.println("Kivett összeg 90 nap után: "+ inv1.close(90));
 
     }
 
