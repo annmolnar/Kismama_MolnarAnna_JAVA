@@ -9,7 +9,9 @@ public class WorkdayCalculator {
         int index = firstDay.ordinal();
         for (int i = index; i < numberOfDays+index; i++) {
             dt.add(nextDay(firstDay).values()[i].getDayType());
-            System.out.println(nextDay(firstDay).values()[i]);
+            //System.out.println(nextDay(firstDay).values()[i]);
+            //if(numberOfDays+index>7)
+
             //System.out.println(nextDay(firstDay).values()[i].getDayType());
         }
         return dt;
@@ -24,6 +26,7 @@ public class WorkdayCalculator {
         for(int i=0;i<days.length;i++){
             if(day.equals(Day.SUNDAY)){
                 nextDay = Day.MONDAY;
+
             }
             else nextDay = days[index+1];
             //System.out.println(nextDay);
