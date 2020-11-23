@@ -19,4 +19,9 @@ public class ToDo {
     public void finish(){
         finished = true;
     }
+
+    @Override
+    public String toString(){
+        return caption+ " ("+finished+") ";
+    }
 }

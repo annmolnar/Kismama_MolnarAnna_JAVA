@@ -13,32 +13,53 @@ public class ToDoList {
     }
 
     public void finishToDos(String caption) {
-        List<String> l = new ArrayList<>();
         for (ToDo i : toDoList) {
-            l.add(i.getCaption());
             if (caption.equals(i.getCaption())) {
-                System.out.println(i.getCaption());
                 i.finish();
-            }if (i.isFinished()==true){
-                toDoList.remove(i.getCaption());
             }
         }
     }
 
     public void finishAllToDos(List<String> toDosToFinish) {
+        List<String> listOfTodos = new ArrayList<>();
+        for(String s : toDosToFinish){
+            //listOfTodos.add(s.getCaption());
+            finishToDos(s);
+            //System.out.println(listOfTodos);
+            /*for(String s:toDosToFinish){
+                if(t.getCaption().equals(s)){
+                    t.finish();
+                    System.out.println(t.getCaption());
+                    System.out.println(t.isFinished());
+                }
+            }*/
+        }
 
     }
 
     public List<String> toDosToFinish() {
         List<String> list = new ArrayList<>();
         for (ToDo i : toDoList) {
-            list.add(i.getCaption());
+            if(!i.isFinished()) {
+                list.add(i.getCaption());
+            }
         }
         return list;
     }
 
     public int numberOfFinishedToDos() {
-        return 3;
+        int count = 0;
+        for(ToDo todo: toDoList){
+            if(todo.isFinished()){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    @Override
+    public String toString(){
+        return toDoList.toString();
     }
 
 
