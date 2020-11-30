@@ -23,8 +23,6 @@ i
 .src/main/java/nyelviElemek/LocalVariables.java,6\6\66c512cc6a213d37e1a0b6499f186a8cc56a38b8
 o
 ?src/main/java/nyelviElemek/uservalidator/UserValidatorMain.java,8\9\89a626f37d3bb2dfe7aef4c60064d1ef73e6cbe0
-N
-src/main/java/array/Array.java,1\b\1b98927eac35a180cdfa9eb06d5ffc0cdfb47ca0
 o
 ?src/main/java/bonyolultabbTipusok/arrays/ArrayOfArraysMain.java,2\4\248bb7a548e414c0b2a1af3860a4273abc65651d
 h

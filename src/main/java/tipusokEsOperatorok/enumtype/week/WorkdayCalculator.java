@@ -7,12 +7,15 @@ public class WorkdayCalculator {
     public List<DayType> dayTypes(Day firstDay, int numberOfDays) {
         List<DayType> dt = new ArrayList<>();
         int index = firstDay.ordinal();
-        for (int i = index; i < numberOfDays+index; i++) {
-            dt.add(nextDay(firstDay).values()[i].getDayType());
-            //System.out.println(nextDay(firstDay).values()[i]);
-            //if(numberOfDays+index>7)
+        for (int i = index; i < numberOfDays; i++) {
+           // dt.add(nextDay(firstDay).values()[i].getDayType());
+            System.out.println((nextDay(firstDay)));
+            //dt.add(nextDay(firstDay).getDayType());
+            System.out.println(dt);
 
-            //System.out.println(nextDay(firstDay).values()[i].getDayType());
+            //System.out.println(nextDay(firstDay).values()[i]);
+
+           // System.out.println(nextDay(firstDay).values()[i].getDayType());
         }
         return dt;
     }
@@ -29,8 +32,8 @@ public class WorkdayCalculator {
 
             }
             else nextDay = days[index+1];
-            //System.out.println(nextDay);
         }
+        //System.out.println(nextDay);
         return nextDay;
 
     }
