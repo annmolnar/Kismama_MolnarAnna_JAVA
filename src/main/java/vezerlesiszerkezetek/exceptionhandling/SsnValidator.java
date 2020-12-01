@@ -22,13 +22,13 @@ public class SsnValidator {
             int lDigit = 0;
             for (int i = 0; i < ssn.length(); i++) {
                 if (i % 2 == 0 && i != 8) {
-                    char odds[] = {ssn.charAt(i)};
-                    String o = new String(odds);
+                    char odd = ssn.charAt(i);
+                    String o = Character.toString(odd);
                     oddsResult += parseInt(o) * 3;
                     //System.out.println(oddsResult);
                 } else if (i % 2 != 0) {
-                    char evens[] = {ssn.charAt(i)};
-                    String e = new String(evens);
+                    char even = ssn.charAt(i);
+                    String e = Character.toString(even);
                     evensResult += parseInt(e) * 7;
                     //System.out.println(e);
                     //System.out.println(evensResult);

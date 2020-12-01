@@ -10,7 +10,10 @@ public class Patient {
         if(name.length()==0){
             throw new IllegalArgumentException("Please give name.");
         }
-        this.socialSecurityNumber = socialSecurityNumber;
+        SsnValidator ssnValidator = new SsnValidator();
+        if(ssnValidator.isValidSsn(socialSecurityNumber)){
+            this.socialSecurityNumber = socialSecurityNumber;
+        } else throw new IllegalArgumentException("Please give valid social security number.");
         this.yearOfBirth = yearOfBirth;
         if(yearOfBirth<=1900){
             throw new IllegalArgumentException("We dont't treat patients that old!");
@@ -30,6 +33,6 @@ public class Patient {
     }
 
     public static void main(String[] args) {
-        Patient patient = new Patient("Anna", "vvvv122", 1900);
+        Patient patient = new Patient("Anna", "092259324", 1920);
     }
 }
